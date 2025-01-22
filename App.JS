@@ -1,34 +1,15 @@
-const heading = React.createElement("h1",{id:"abc"},"HELLOW WORLD FROM REACT!!!");
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+//React element => object => it's basically an obj when we rendered it becomes html ele
 
-/**
- * 
- * <div id="parent">
- *      <div id="child1">
- *          <h1>I'm h1 tag</h1>
- *          <h2>I'm h2 tag</h2>
- *      </div>
- *       <div id="child2">
- *          <h1>I'm h1 tag</h1>
- *          <h2>I'm h2 tag</h2>
- *      </div>
- * 
- */
-
-const parent = React.createElement("div",{id:"parent"},[
-    React.createElement("div",{id : "child1"},[
-        React.createElement("h1",{},"I'm h1 tag"),
-        React.createElement("h2",{},"I'm h2 tag")
-    ]),
-    React.createElement("div",{id : "child1"},[
-        React.createElement("h1",{},"I'm h1 tag"),
-        React.createElement("h2",{},"I'm h2 tag")
-    ])
-]
+const heading = React.createElement(
+    "h1",
+    {id:"heading"},
+    "My_React"
 );
 
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+//Render
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
+root.render(heading);
