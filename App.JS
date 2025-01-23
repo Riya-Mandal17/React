@@ -35,7 +35,7 @@ const FunCom1 = () =>(
 
 const FunCom2 = () => (
     <div id ="container">
-        <FunCom1 />
+        <FunCom1 />   
         <h1>Here it is</h1>
     </div>
 );
@@ -43,3 +43,13 @@ const FunCom2 = () => (
 const child = ReactDOM.createRoot(document.getElementById("parant"));
 child.render(<FunCom2 />);
 
+//we can inject any js code in jsx by using {...}
+const FunCom3 = () =>(
+    <div id ="abc">
+        {
+            heading
+        }
+        <h1>This is the example of component compotition</h1> 
+    </div> 
+  );
+  
